@@ -1,25 +1,33 @@
 import React from "react";
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-const Header = () => {
+export default function Header(){
   return (
-    <header className="bg-white rounded-lg">
-      <nav>
+    <header className="bg-white rounded-lg p-2 ">
+      <nav className="flex">
         <p>Rento</p>
         <div>
-          <NavLink
+            <NavLink
             to={'/cars'}
-            className={({isActive})=>{
-              `${isActive ? 'text-purple-500' : 'text-black'}
-              text-lg font-serif`
-            }}
-          >
-            Cars
-          </NavLink>
+            >
+              Cars
+            </NavLink>
+            <NavLink
+            to={'/locations'}
+            >
+              Locations
+            </NavLink>
+            <NavLink
+            to={'/deals'}
+            >
+              Deals
+            </NavLink>
         </div>
+        <button>
+          Contact Us
+        </button>
       </nav>
     </header>
   )
 }
 
-export default Header
