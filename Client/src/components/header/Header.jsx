@@ -5,6 +5,7 @@ export default function Header(){
   return (
     <header className="bg-white rounded-lg p-2 ">
       <nav className="flex">
+        <h1 className="text-black">hello from header</h1>
         <p>Rento</p>
         <div>
             <NavLink
