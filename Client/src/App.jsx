@@ -1,6 +1,6 @@
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Routes } from "react-router-dom"
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom"
 
-import Home from "./pages/Home.jsx"
+import Home from "./pages/home/Home.jsx"
 import Deals from "./pages/Deals.jsx"
 import Cars from "./pages/Cars.jsx"
 import Locations from "./pages/Locations.jsx"
