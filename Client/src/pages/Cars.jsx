@@ -6,8 +6,15 @@ export default function Cars(){
   return (
     <>
       <Header/>
-      <div className="mt-20">
-        <CarCard/>
+      <div>
+        <button>Filter</button>
+      </div>
+      <div className="pt-40 flex gap-8 px-20">
+        {
+          carList.map((car)=>
+            <CarCard car={car}/>
+          )
+        }
       </div>
     </>
   )

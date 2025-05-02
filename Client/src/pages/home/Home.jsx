@@ -11,10 +11,10 @@ export default function Home() {
       <img src="/ferrari1.jpg" alt="Ferrari" className="object-fill" /> 
       <p className="absolute top-48 right-16 z-10 text-white text-5xl font-bold font-serif tracking-wide">LIVE YOUR DREAM</p>
       <hr />
-      <div className="text-white my-16 space-y-4">
-        <p className="text-xl">About Us -</p>
-        <p className="text-6xl flex justify-self-end w-auto text-wrap">
-          From Exotic sports cars to Luxury sedans and SUVs, Bola's Exotic Car Collection offers an exceptional selection and Bola's trusted, personalised service
+      <div className="text-white my-40 flex px-4 justify-around">
+        <p className="text-xl w-96">About Us -</p>
+        <p className="text-5xl justify-self-end w-auto text-wrap tracking-wide leading-relaxed">
+          From Exotic sports cars to Luxury sedans and SUVs, Bola's Exotic Car Collection offers an<span className="text-gray-500"> exceptional selection and Bola's trusted, personalised service</span>
         </p>
       </div>
       <hr />
