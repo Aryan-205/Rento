@@ -1,11 +1,14 @@
 import React from "react";
-import Header from "../components/header/Header";
+import Header from "../components/Header";
+import CarCard from "../components/CarCard";
 
 export default function Cars(){
   return (
     <>
       <Header/>
-      <h1 className="text-white">hello from cars</h1>
+      <div className="mt-20">
+        <CarCard/>
+      </div>
     </>
   )
 }

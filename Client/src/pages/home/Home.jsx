@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../components/header/Header.jsx";
+import Header from "../../components/Header.jsx";
 import LogoCard from "../../components/LogoCard.jsx";
 import logos from './logo.js'
 
@@ -22,7 +22,6 @@ export default function Home() {
         {logos.map((img)=>
           <LogoCard i={img}/>
         )}
-        
       </div>
     </div>
     </>
