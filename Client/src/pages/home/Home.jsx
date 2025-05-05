@@ -106,32 +106,37 @@ export default function Home() {
         <img src="/classicCar4.jpeg" alt="classic Car" className="w-[40%] rounded-lg" />
       </div>
       <hr />
-      <footer className="flex items-center justify-center">
-        <div className="flex flex-col text-2xl">
+      <p className="text-gray-400 font-bold text-6xl flex justify-self-center mt-8">Rento</p>
+      <footer className="flex items-center justify-between p-8">
+        <div className="flex flex-col text-2xl gap-2">
           <NavLink
             to={'/cars'}
-            className={({isActive})=>`${isActive ? 'text-red-600' : `text-gray-500`}`}
+            className="text-gray-500 border border-gray-500 rounded-3xl p-2"
           >
             Cars
           </NavLink>
           <NavLink
             to={'/locations'}
-            className={({isActive})=>`${isActive ? 'text-red-600' : `text-gray-500`}`}
+            className="text-gray-500 border border-gray-500 rounded-3xl p-2"
           >
             Locations
           </NavLink>
           <NavLink
             to={'/deals'}
-            className={({isActive})=>`${isActive ? 'text-red-600' : `text-gray-50`}`}
+            className="text-gray-500 border border-gray-500 rounded-3xl p-2"
           >
             Deals
           </NavLink>
           <NavLink
-            to={'/deals'}
-            className={({isActive})=>`${isActive ? 'text-red-600' : `text-gray-50`}`}
+            className="text-gray-500 border border-gray-500 rounded-3xl p-2"
           >
-            Deals
+            Help
           </NavLink>
+        </div>
+        <div className="flex flex-col gap-2">
+          <p className="text-gray-500 text-2xl border border-gray-500 rounded-3xl p-2">Terms and Conditions</p>
+          <p className="text-gray-500 text-2xl border border-gray-500 rounded-3xl p-2">About Us</p>
+          <p className="text-gray-500 text-2xl border border-gray-500 rounded-3xl p-2">Contact Us</p>
         </div>
       </footer>
     </div>
