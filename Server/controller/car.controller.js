@@ -1,10 +1,13 @@
-import { uploadOnCloudinary } from "../../../Funtube/src/utils/cloudinary";
-import { Cars } from "../models/Cars";
+import { uploadOnCloudinary } from "../../../Funtube/src/utils/cloudinary.js";
+import { Cars } from "../models/car.model.js";
 
 const AddCar = async(req,res) => {
   const { brand, name, doors, price, type } = req.body
+  //brand, name, doors, price, type
 
-  if([ brand, name, doors, price, type].trim() == ''){
+  if([brand, name, doors, price, type].some((field)=>
+    field?.trim()===''
+  )){
     throw console.error("All fields are required");
   }
 

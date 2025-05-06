@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-
+import React, { useEffect, useState } from "react"
 
 function Admin() {
   const [brand,setBrand] = useState('')
@@ -7,7 +6,16 @@ function Admin() {
   const [type,setType] = useState('')
   const [doors,setDoors] = useState('')
   const [price,setPrice] = useState('')
+  const [form, setForm] = useState([])
 
+  const handleData = () => {
+    setForm({brand, name, type, doors, price})
+  }
+
+  useEffect(()=>{
+    const response = fetch('http://localhost:5173/admin',{brand,name,type,doors,price})
+    console.log(response)
+  },[])
 
   return (
     <>
@@ -49,6 +57,7 @@ function Admin() {
             value={type}
             onChange={(e)=>setType(e.target.value)}
             />
+            <button onClick={handleData} className="text-white text-lg p-4 px-8 rounded-3xl border border-white hover:text-black hover:bg-white active:opacity-80 duration-500">Upload</button>
         </div>
     </>
   )
