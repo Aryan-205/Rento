@@ -18,7 +18,7 @@ const CarSchema = new Schema({
     required:true,
     trim:true
   },
-  seats:{
+  doors:{
     type:Number,
     required:true
   },
@@ -26,5 +26,9 @@ const CarSchema = new Schema({
     type:Number,
     required:true
   },
+  type:{
+    type:String,
+    required:true
+  }
 })
 export const Cars = mongoose.model('Cars',CarSchema)
