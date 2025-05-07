@@ -3,7 +3,6 @@ import { Cars } from "../models/car.model.js";
 
 const AddCar = async(req,res) => {
   const { brand, name, doors, price, type } = req.body
-  //brand, name, doors, price, type
 
   if([brand, name, doors, price, type].some((field)=>
     field?.trim()===''
@@ -30,6 +29,6 @@ const AddCar = async(req,res) => {
     carImage:carImage.url
   })
 
-  return res.send(200).json(carData)
+  return res.status(200).json(carData)
 }
 export default AddCar
