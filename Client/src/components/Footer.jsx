@@ -21,8 +21,8 @@ export default function Footer() {
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase">Resources</h2>
                             <div className="grid">
-                                <Link to="/" className="text-gray-500 hover:underline">Cars</Link>
-                                <Link to="/about" className="text-gray-500 hover:underline">Locations</Link>
+                                <Link to="/cars" className="text-gray-500 hover:underline">Cars</Link>
+                                <Link to="/locations" className="text-gray-500 hover:underline">Locations</Link>
                             </div>
                         </div>
                         <div>

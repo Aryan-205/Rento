@@ -4,6 +4,7 @@ import LogoCard from "../../components/LogoCard.jsx";
 import logos from './logo.js'
 import { NavLink } from "react-router-dom";
 import Footer from "../../components/Footer.jsx";
+import Sidebar from "../../components/Sidebar.jsx";
 
 export default function Home() {
   return (
