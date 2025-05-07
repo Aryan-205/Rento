@@ -11,7 +11,6 @@ const CarSchema = new Schema({
   brand:{
     type:String,
     required:true,
-    trim:true
   },
   name:{
     type:String,
