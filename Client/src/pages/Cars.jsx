@@ -10,7 +10,7 @@ export default function Cars(){
       <div>
         <img src="/porschegt3rs.jpg" alt="" className="object-fill"/>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8 px-8 -mt-12">
+      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8 p-8 -mt-24 ">
         <CarCard />
         <CarCard />
         <CarCard />

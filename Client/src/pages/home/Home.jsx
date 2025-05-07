@@ -48,7 +48,10 @@ export default function Home() {
             isActive ? 'bg-white text-black' : 'border border-white'
           )}`}>Luxury</div>
         </div>
+        <NavLink
+          to={'/cars'}>
           <button className="text-white border border-white rounded-3xl p-2 px-4 hover:bg-white hover:text-black active:opacity-60 duration-500">Show All &#8594;</button>
+        </NavLink>
         <div>
           <img src="" alt="" />
         </div>
