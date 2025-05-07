@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
 function Admin() {
   const [brand,setBrand] = useState('')
@@ -6,16 +6,24 @@ function Admin() {
   const [type,setType] = useState('')
   const [doors,setDoors] = useState('')
   const [price,setPrice] = useState('')
-  const [form, setForm] = useState([])
+  const [carImage,setCarImage] = useState(null)
 
-  const handleData = () => {
-    setForm({brand, name, type, doors, price})
+  const handleData = async() => {
+
+    const data = new FormData()
+      data.append("brand", brand)
+      data.append("name", name)
+      data.append("type", type)
+      data.append("doors", doors)
+      data.append("price", price)
+      data.append("carImage", carImage)
+
+    await fetch('http://localhost:8000/car/v1/admin',{
+      method:'POST',
+      body: data
+    })
   }
 
-  useEffect(()=>{
-    const response = fetch('http://localhost:5173/admin',{brand,name,type,doors,price})
-    console.log(response)
-  },[])
 
   return (
     <>
@@ -23,7 +31,10 @@ function Admin() {
           <input 
             type="file"  
             placeholder="Image" 
-            className="bg-black text-white border border-white p-4 rounded-lg"/>
+            className="bg-black text-white border border-white p-4 rounded-lg"
+            onChange={(e)=>setCarImage(e.target.files[0])
+            }
+            />
           <input 
             type="text" 
             placeholder="Brand" 
