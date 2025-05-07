@@ -25,16 +25,16 @@ export default function Header(){
               Locations
             </NavLink>
             <NavLink
-              to={'/deals'}
+              to={'/aboutUs'}
               className={({isActive})=>`${isActive ? 'text-red-600' : `text-black`}`}
             >
-              Deals
+              About Us
             </NavLink>
         </div>
         <button
           className="p-1 px-4 bg-white text-black border-2 border-black font-serif rounded-3xl text-xl"
         >
-          Contact Us
+          Bookings
         </button>
       </nav>
     </header>

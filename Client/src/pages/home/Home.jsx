@@ -3,6 +3,7 @@ import Header from "../../components/Header.jsx";
 import LogoCard from "../../components/LogoCard.jsx";
 import logos from './logo.js'
 import { NavLink } from "react-router-dom";
+import Footer from "../../components/Footer.jsx";
 
 export default function Home() {
   return (
@@ -105,40 +106,7 @@ export default function Home() {
         </div>
         <img src="/classicCar4.jpeg" alt="classic Car" className="w-[40%] rounded-lg" />
       </div>
-      <hr />
-      <p className="text-gray-400 font-bold text-6xl flex justify-self-center mt-8">Rento</p>
-      <footer className="flex items-center justify-between p-8">
-        <div className="flex flex-col text-2xl gap-2">
-          <NavLink
-            to={'/cars'}
-            className="text-gray-500 border border-gray-500 rounded-3xl p-2"
-          >
-            Cars
-          </NavLink>
-          <NavLink
-            to={'/locations'}
-            className="text-gray-500 border border-gray-500 rounded-3xl p-2"
-          >
-            Locations
-          </NavLink>
-          <NavLink
-            to={'/deals'}
-            className="text-gray-500 border border-gray-500 rounded-3xl p-2"
-          >
-            Deals
-          </NavLink>
-          <NavLink
-            className="text-gray-500 border border-gray-500 rounded-3xl p-2"
-          >
-            Help
-          </NavLink>
-        </div>
-        <div className="flex flex-col gap-2">
-          <p className="text-gray-500 text-2xl border border-gray-500 rounded-3xl p-2">Terms and Conditions</p>
-          <p className="text-gray-500 text-2xl border border-gray-500 rounded-3xl p-2">About Us</p>
-          <p className="text-gray-500 text-2xl border border-gray-500 rounded-3xl p-2">Contact Us</p>
-        </div>
-      </footer>
+      <Footer/>
     </div>
     </>
   )
