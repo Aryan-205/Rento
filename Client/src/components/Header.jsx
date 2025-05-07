@@ -3,15 +3,14 @@ import { NavLink } from 'react-router-dom'
 
 export default function Header(){
   return (
-    <header className="relative flex justify-center items-center">
-      <nav className="fixed top-4 left-10 right-10 z-10 flex  justify-between items-center bg-white text-black rounded-3xl p-2 text-2xl font-medium font-serif h-12 px-16">
+    <header className="w-full fixed top-4 z-10 bg-white text-black rounded-3xl px-10">
+      <nav className=" flex flex-wrap justify-between items-center py-2 font-medium font-serif ">
         <NavLink
           to={'/'}
-          className={`text-3xl font-bold bg-gradient-to-tr from-red-600 to-black bg-clip-text text-transparent shrink`}
-        >
+          className={`text-lg md:text-2xl font-bold bg-gradient-to-tr from-red-600 to-black bg-clip-text text-transparent shrink`}>
           Rento
         </NavLink>
-        <div className="space-x-12">
+        <div className="hidden md:flex space-x-6 mt-2 md:mt-0 text-lg md:text-xl">
             <NavLink
               to={'/cars'}
               className={({isActive})=>`${isActive ? 'text-red-600' : `text-black`}`}
@@ -31,11 +30,13 @@ export default function Header(){
               About Us
             </NavLink>
         </div>
-        <button
-          className="p-1 px-4 bg-white text-black border-2 border-black font-serif rounded-3xl text-xl"
-        >
-          Bookings
-        </button>
+        <div className="flex">
+          <button className="hover:border hover:border-black rounded-full p-1"><img src="/hamburgerMenu.png" alt="" className="display md:hidden w-4 h-auto"/></button>
+          <button
+            className="py-1 px-4 border border-black font-serif rounded-full text-sm md:text-xl hidden md:flex">
+            Bookings
+          </button>
+        </div>
       </nav>
     </header>
   //   <header className="w-full bg-white shadow-md fixed top-0 z-50">
