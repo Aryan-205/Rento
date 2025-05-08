@@ -77,7 +77,7 @@ export default function Header(){
             </div>
 
             //Backdrop
-            <div className={`fixed top-0 right-0 bg-white backdrop-blur-sm bg-transparent w-full z-40 h-full ${sidebar ? 'flex' : 'hidden' } '`} onClick={()=>setSidebar((prev)=>!prev)}>
+            <div className={`fixed top-0 right-0 backdrop-blur-sm bg-transparent w-full z-30 h-full ${sidebar ? 'flex' : 'hidden' } '`} onClick={()=>setSidebar((prev)=>!prev)}>
             </div>
     </>
   )

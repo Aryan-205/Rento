@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../components/Header";
 import CarCard from "../components/CarCard";
 import BookingCard from "../components/BookingCard";
-import Footer from "../components/Footer";
 import { useState } from "react";
 
 
@@ -25,11 +24,23 @@ export default function Cars(){
         <CarCard />
         <CarCard />
       </div>
-      <div className={`fixed inset-0 z-50 p-8 flex items-center justify-center ${card ? 'display' : 'hidden'}`}>
-        <BookingCard/>
-      </div>
-      <div className={`fixed inset-0 z-25 w-full h-full backdrop-blur-sm cursor-pointer ${card ? 'display' : 'hidden'}`} onClick={()=>setCard(prev=>!prev)}></div>
-      <Footer/>
+      {card && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black bg-opacity-40 backdrop-blur-sm"
+            onClick={() => setCard(false)}
+          ></div>
+
+          {/* Modal */}
+          <div
+            className="relative z-50"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <BookingCard />
+          </div>
+        </div>
+      )}
     </>
   )
 }
