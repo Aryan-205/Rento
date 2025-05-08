@@ -6,11 +6,14 @@ export default function Booking(){
   return (
     <>
       <Header/>
-      <div>
-        <BookingCard/>
-        <h1 className="text-3xl bg-red-500">hello</h1>
-      </div>
+      <div className="flex gap-8 h-screen p-8 pt-20">
+        <div>
+          <BookingCard/>
+        </div>
+        <div>
 
+        </div>
+      </div>
     </>
   )
 }

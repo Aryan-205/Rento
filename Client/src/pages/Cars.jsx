@@ -1,12 +1,17 @@
 import React from "react";
 import Header from "../components/Header";
 import CarCard from "../components/CarCard";
+import BookingCard from "../components/BookingCard";
 import Footer from "../components/Footer";
+import { useState } from "react";
+
 
 export default function Cars(){
+  const [card, setCard] = useState(false)
   return (
     <>
       <Header/>
+      <button onClick={()=>setCard(prev=>!prev)} className="text-red-500 p-2 border border-red-500 mt-20">Change</button>
       <div>
         <img src="/porschegt3rs.jpg" alt="" className="object-fill"/>
       </div>
@@ -20,6 +25,10 @@ export default function Cars(){
         <CarCard />
         <CarCard />
       </div>
+      <div className={`fixed inset-0 z-50 p-8 flex items-center justify-center ${card ? 'display' : 'hidden'}`}>
+        <BookingCard/>
+      </div>
+      <div className={`fixed inset-0 z-25 w-full h-full backdrop-blur-sm cursor-pointer ${card ? 'display' : 'hidden'}`} onClick={()=>setCard(prev=>!prev)}></div>
       <Footer/>
     </>
   )

@@ -6,6 +6,7 @@ import Cars from "./pages/Cars.jsx"
 import Locations from "./pages/Locations.jsx"
 import Admin from "./pages/Admin.jsx"
 import Booking from "./pages/Booking.jsx"
+import CarPreview from "./pages/CarPreview.jsx"
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
         <Route path="/locations" element={<Locations/>} />
         <Route path="/aboutUs" element={<AboutUs/>} />
         <Route path="/booking" element={<Booking/>} />
+        <Route path="/carPreview" element={<CarPreview/>} />
       </Route>
     )
   )
