@@ -5,7 +5,7 @@ export default function Booking(){
   return (
     <>
       <Header/>
-      <h1 className="text-white justify-self-center">hello from booking</h1>
+      <h1 className="text-white justify-self-center ">hello from booking</h1>
     </>
   )
 }
