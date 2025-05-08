@@ -1,11 +1,16 @@
 import React from "react";
 import Header from "../components/Header";
+import BookingCard from "../components/BookingCard";
 
 export default function Booking(){
   return (
     <>
       <Header/>
-      <h1 className="text-white justify-self-center ">hello from booking</h1>
+      <div>
+        <BookingCard/>
+        <h1 className="text-3xl bg-red-500">hello</h1>
+      </div>
+
     </>
   )
 }

@@ -24,7 +24,7 @@ export default function Sidebar(){
           About Us
         </NavLink>
         <NavLink
-          to={'/aboutUs'}
+          to={'/booking'}
           className={`border-b border-white p-2`}
         >
           Bookings
