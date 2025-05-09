@@ -51,6 +51,12 @@ export default function Header(){
       //Sidebar
       <div className={`fixed top-0 right-0 bg-black text-white w-60 flex-col z-50 h-full p-4 text-xl gap-8 rounded-l-xl border border-white ${sidebar ? 'flex' : 'hidden' } '`}>
               <NavLink
+                to={'/'}
+                className={`border-b border-white p-2`}
+              >
+                Home
+              </NavLink>
+              <NavLink
                 to={'/cars'}
                 className={`border-b border-white p-2`}
               >

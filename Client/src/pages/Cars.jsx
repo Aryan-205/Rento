@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import CarCard from "../components/CarCard";
-import BookingCard from "../components/BookingCard";
 import { useSelector, useDispatch } from "react-redux";
 import { setRender } from "../store/feature";
+import CarPopupCard from "../components/CarPopupCard";
 
 export default function Cars() {
   const render = useSelector((state) => state.feature.render);
@@ -44,7 +44,7 @@ export default function Cars() {
             onClick={() => dispatch(setRender(false))}
           ></div>
           <div className="relative z-50" onClick={(e) => e.stopPropagation()}>
-            <BookingCard />
+            <CarPopupCard/>
           </div>
         </div>
       )}
