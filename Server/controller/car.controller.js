@@ -31,4 +31,15 @@ const AddCar = async(req,res) => {
 
   return res.status(200).json(carData)
 }
-export default AddCar
+
+const getCars = async(_, res) => {
+
+  try {
+    const allCars = await Cars.find()
+    return res.status(200).json(allCars)
+  } catch (error) {
+    return res.status(500).json({ message: 'Server error' });
+  }
+}
+
+export  {AddCar, getCars}

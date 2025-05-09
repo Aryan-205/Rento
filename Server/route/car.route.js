@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { upload } from '../middleware/multer.middleware.js'
-import AddCar from "../controller/car.controller.js";
+import {AddCar, getCars} from "../controller/car.controller.js";
 
 const router = Router();
 
@@ -11,5 +11,7 @@ router.route("/admin").post(
   }]),
   AddCar
 )
+
+router.route("/cars").get(getCars)
 
 export default router
