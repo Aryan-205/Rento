@@ -2,15 +2,18 @@ import React from "react";
 import Header from "../components/Header";
 import CarCard from "../components/CarCard";
 import BookingCard from "../components/BookingCard";
-import { useState } from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+import { setRender } from "../store/feature";
 
 
 export default function Cars(){
-  const [card, setCard] = useState(false)
+
+  const render = useSelector((state) => state.feature.render);
+  const dispatch = useDispatch();
   return (
     <>
       <Header/>
-      <button onClick={()=>setCard(prev=>!prev)} className="text-red-500 p-2 border border-red-500 mt-20">Change</button>
       <div>
         <img src="/porschegt3rs.jpg" alt="" className="object-fill"/>
       </div>
@@ -24,15 +27,14 @@ export default function Cars(){
         <CarCard />
         <CarCard />
       </div>
-      {card && (
+      {render && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
-          {/* Backdrop */}
+
           <div
             className="absolute inset-0 bg-black bg-opacity-40 backdrop-blur-sm"
-            onClick={() => setCard(false)}
+            onClick={() => dispatch(setRender(false))}
           ></div>
 
-          {/* Modal */}
           <div
             className="relative z-50"
             onClick={(e) => e.stopPropagation()}
