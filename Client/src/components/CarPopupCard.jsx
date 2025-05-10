@@ -16,7 +16,7 @@ export default function CarPopupCard({card}){
           </div>
           <div className="flex flex-col items-end">
             <p>.</p>
-            <p className="text-gray-500 text-lg">{card.price}/Day</p>
+            <p className="text-gray-500 text-lg"><span className="text-white">${card.price}</span>/Day</p>
             <p className="text-gray-500 text-lg ">{card.brand}</p>
             <p className="text-gray-500 text-lg">{card.doors}</p>
             <p className="text-gray-500 text-lg">{card.type}</p>

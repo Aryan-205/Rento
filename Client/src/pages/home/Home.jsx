@@ -35,32 +35,38 @@ export default function Home() {
         <p className="text-white text-sm md:text-xl">We provide our coustomers with the most increadible driving experience</p>
         <p className="text-white text-sm md:text-xl">That is why we have only world-class cars in our Fleet</p>
         <div className="flex text-white gap-1 md:gap-4 flex-wrap">
-          <div className={`rounded-3xl cursor-pointer border bg-white text-black text-sm md:text-lg p-2 ${({isActive})=>(
-            isActive ? 'bg-white text-black' : 'border border-white'
-          )}`}>Premium</div>
-          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 ${({isActive})=>(
-            isActive ? 'bg-white text-black' : 'border border-white'
-          )}`}>Coupe</div>
-          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 ${({isActive})=>(
-            isActive ? 'bg-white text-black' : 'border border-white'
-          )}`}>Hypercars</div>
-          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 ${({isActive})=>(
-            isActive ? 'bg-white text-black' : 'border border-white'
-          )}`}>SportsCar</div>
-          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 ${({isActive})=>(
-            isActive ? 'bg-white text-black' : 'border border-white'
-          )}`}>Limousines</div>
-          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 ${({isActive})=>(
-            isActive ? 'bg-white text-black' : 'border border-white'
-          )}`}>Luxury</div>
+          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Premium</div>
+          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Coupe</div>
+          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Hypercars</div>
+          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>SportsCar</div>
+          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Limousines</div>
+          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Luxury</div>
         </div>
         <NavLink
           to={'/cars'}>
           <button className="text-white border border-white rounded-3xl p-2 px-4 hover:bg-white hover:text-black active:opacity-60 duration-500">Show All &#8594;</button>
         </NavLink>
-        {/* <div>
-          <img src="" alt="" />
-        </div> */}
+        <div className="grid gap-8">
+          <div className="flex flex-wrap gap-8 justify-center">
+            <div className="w-72 rounded-xl border border-white group overflow-hidden">
+              <img src="/2024-Rolls-Royce-Spectre-001-1600.jpg" alt="" className="object-cover hover:scale-125 transition ease-in-out duration-500" />
+            </div>
+            <div className="w-72 rounded-xl border border-white group overflow-hidden">
+              <img src="/1957-BMW-507-Series-2-001-1600.jpg" alt="" className="object-cover hover:scale-125 transition ease-in-out duration-500" />
+            </div>
+            <div className="w-72 rounded-xl border border-white group overflow-hidden">
+              <img src="/2022-Novitec-Lamborghini-Huracan-STO-001-1600.jpg" alt="" className="object-cover hover:scale-125 transition ease-in-out duration-500" />
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            <div className="w-56 rounded-xl border border-white group overflow-hidden">
+              <img src="/2025-Porsche-911-Carrera-T-001-1600.jpg" alt="" className="object-cover hover:scale-125 transition ease-in-out duration-500" />
+            </div>
+            <div className="w-56 rounded-xl border border-white group overflow-hidden">
+              <img src="/2019-Mercedes-AMG-G63-001-1600.jpg" alt="" className="object-cover hover:scale-125 transition ease-in-out duration-500" />
+            </div>
+          </div>
+        </div>
       </div>
       <div className="flex flex-col p-8">
         <p className="text-gray-500 text-lg">Taking Care of every Client</p>
