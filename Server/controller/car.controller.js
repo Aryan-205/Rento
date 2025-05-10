@@ -46,10 +46,9 @@ const getBrand = async(req, res) => {
 
   try {
 
-    const id = req.query.id
-    const allCars = await Cars.find((u)=>u._id == id)
+    const brand = req.body
+    const allCars = await Cars.find((u)=>u.brand == brand)
     return res.status(200).json(allCars)
-    
   } catch (error) {
     return res.status(500).json({ message: 'Server error in brand'})
   }

@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <div className="flex justify-around my-16">
         {logos.map((img)=>
-          <LogoCard i={img}/>
+          <LogoCard i={img.img} brand={img.brand} key={img.id}/>
         )}
       </div>
       <div className="flex flex-col items-center gap-4">
@@ -52,9 +52,9 @@ export default function Home() {
           to={'/cars'}>
           <button className="text-white border border-white rounded-3xl p-2 px-4 hover:bg-white hover:text-black active:opacity-60 duration-500">Show All &#8594;</button>
         </NavLink>
-        <div>
+        {/* <div>
           <img src="" alt="" />
-        </div>
+        </div> */}
       </div>
       <div className="flex flex-col p-8">
         <p className="text-gray-500 text-lg">Taking Care of every Client</p>

@@ -10,7 +10,6 @@ export default function Cars() {
   const dispatch = useDispatch();
 
   const [cars, setCars] = useState([])
-  const [card, setCard] = useState('')
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -23,13 +22,6 @@ export default function Cars() {
       }
     };
     fetchCars();
-    const fetchBrand =  async() => {
-      try {
-        const response = await fetch(`http://localhost:8000/car/v1/cars/`)
-      } catch (error) {
-        console.error("Error fetching cars:",error)
-      }
-    }
   }, []);
 
   return (
