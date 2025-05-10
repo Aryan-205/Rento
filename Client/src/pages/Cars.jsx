@@ -4,6 +4,7 @@ import CarCard from "../components/CarCard";
 import { useSelector, useDispatch } from "react-redux";
 import { setRender } from "../store/feature";
 import CarPopupCard from "../components/CarPopupCard";
+import { useLocation } from "react-router-dom";
 
 export default function Cars() {
   const render = useSelector((state) => state.feature.render);
@@ -12,10 +13,16 @@ export default function Cars() {
   const [cars, setCars] = useState([])
   const [card, setCard] = useState('')
 
+  const locate = useLocation()
+  const brand = locate.state?.brandChosen
+
   useEffect(() => {
     const fetchCars = async () => {
       try {
-        const url = `http://localhost:8000/car/v1/cars`
+        const url = brand 
+            ? `http://localhost:8000/car/v1/cars?brand=${brand}`
+            : `http://localhost:8000/car/v1/cars`
+        
         const response = await fetch(url);
         const cars = await response.json();
         setCars(cars)
@@ -24,7 +31,7 @@ export default function Cars() {
       }
     };
     fetchCars();
-  }, []);
+  }, [brand]);
 
   return (
     <>
