@@ -42,4 +42,17 @@ const getCars = async(_, res) => {
   }
 }
 
-export  {AddCar, getCars}
+const getBrand = async(req, res) => {
+
+  try {
+
+    const id = req.query.id
+    const allCars = await Cars.find((u)=>u._id == id)
+    return res.status(200).json(allCars)
+    
+  } catch (error) {
+    return res.status(500).json({ message: 'Server error in brand'})
+  }
+}
+
+export  {AddCar, getCars, getBrand}

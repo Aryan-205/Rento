@@ -10,6 +10,7 @@ export default function Cars() {
   const dispatch = useDispatch();
 
   const [cars, setCars] = useState([])
+  const [card, setCard] = useState('')
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -22,6 +23,13 @@ export default function Cars() {
       }
     };
     fetchCars();
+    const fetchBrand =  async() => {
+      try {
+        const response = await fetch(`http://localhost:8000/car/v1/cars/`)
+      } catch (error) {
+        console.error("Error fetching cars:",error)
+      }
+    }
   }, []);
 
   return (
@@ -33,7 +41,7 @@ export default function Cars() {
       <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8 p-8 -mt-24 ">
         {
           cars.map((car)=>
-            <CarCard name={car.name} price={car.price} carImage={car.carImage} key={car._id}/>
+            <CarCard name={car.name} price={car.price} carImage={car.carImage} key={car._id} onClick={()=>setCard(car._id)}/>
           )
         }
       </div>
