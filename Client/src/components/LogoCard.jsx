@@ -1,10 +1,6 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
 
-export default function LogoCard({img, onSelect, brandChosen}){
-  const navigate = useNavigate()
+export default function LogoCard({img, onSelect}){
   const handleClick=()=>{
-    navigate('/cars',{state:{brandChosen}})
     onSelect(img)
   }
   return (

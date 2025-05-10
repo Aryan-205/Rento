@@ -15,6 +15,7 @@ export default function Cars() {
 
   const locate = useLocation()
   const brand = locate.state?.brandChosen
+  console.log(locate.state,"from cars")
 
   useEffect(() => {
     const fetchCars = async () => {

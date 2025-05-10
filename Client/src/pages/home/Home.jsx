@@ -2,13 +2,15 @@ import React,{useState} from "react";
 import Header from "../../components/Header.jsx";
 import LogoCard from "../../components/LogoCard.jsx";
 import logos from './logo.js'
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer.jsx";
 
 export default function Home() {
 
+  const navigate = useNavigate()
+
   const [brand,setBrand] = useState('')
-  console.log(brand)
+  console.log(brand.brand,"from home")
 
   return (
     <>
@@ -25,7 +27,7 @@ export default function Home() {
       </div>
       <div className="flex justify-around my-16">
         {logos.map((img)=>
-          <LogoCard img={img} key={img.id} brandChosen={brand} onSelect={(selected) => setBrand(selected)}/>
+          <LogoCard img={img} key={img.id} onSelect={(selected) => navigate("/cars",{state:{brandChosen: selected.brand}})}/>
         )}
       </div>
       <div className="flex flex-col items-center gap-4">
