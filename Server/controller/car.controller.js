@@ -32,26 +32,17 @@ const AddCar = async(req,res) => {
   return res.status(200).json(carData)
 }
 
-const getCars = async(_, res) => {
+const getCars = async(req, res) => {
 
   try {
-    const allCars = await Cars.find()
+    const { brand } =  req.query
+    const filter = brand ? { brand } : {}
+
+    const allCars = await Cars.find(filter)
     return res.status(200).json(allCars)
   } catch (error) {
     return res.status(500).json({ message: 'Server error' });
   }
 }
 
-const getBrand = async(req, res) => {
-
-  try {
-
-    const brand = req.body
-    const allCars = await Cars.find((u)=>u.brand == brand)
-    return res.status(200).json(allCars)
-  } catch (error) {
-    return res.status(500).json({ message: 'Server error in brand'})
-  }
-}
-
-export  {AddCar, getCars, getBrand}
+export  {AddCar, getCars}

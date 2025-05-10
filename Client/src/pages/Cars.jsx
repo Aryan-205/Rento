@@ -15,7 +15,8 @@ export default function Cars() {
   useEffect(() => {
     const fetchCars = async () => {
       try {
-        const response = await fetch('http://localhost:8000/car/v1/cars');
+        const url = `http://localhost:8000/car/v1/cars`
+        const response = await fetch(url);
         const cars = await response.json();
         setCars(cars)
       } catch (error) {
