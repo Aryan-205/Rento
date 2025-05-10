@@ -32,15 +32,15 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center gap-4">
         <p className="text-white text-5xl md:text-7xl font-bold">Our Vehicle Fleet</p>
-        <p className="text-white text-sm md:text-xl">We provide our coustomers with the most increadible driving experience</p>
+        <p className="text-white text-sm md:text-xl text-center">We provide our coustomers with the most increadible driving experience</p>
         <p className="text-white text-sm md:text-xl">That is why we have only world-class cars in our Fleet</p>
-        <div className="flex text-white gap-1 md:gap-4 flex-wrap">
-          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Premium</div>
-          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Coupe</div>
-          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Hypercars</div>
-          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>SportsCar</div>
-          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Limousines</div>
-          <div className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Luxury</div>
+        <div className="flex text-white gap-1 md:gap-4 flex-wrap justify-center">
+          <p className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Premium</p>
+          <p className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Coupe</p>
+          <p className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Hypercars</p>
+          <p className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>SportsCar</p>
+          <p className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Limousines</p>
+          <p className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Luxury</p>
         </div>
         <NavLink
           to={'/cars'}>
@@ -110,7 +110,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col-reverse md:flex-row p-8 items-around gap-20 my-20">
+      <div className="flex flex-col-reverse md:flex-row p-8 gap-20 my-20">
         <div className="flex flex-col gap-20">
           <p className="text-white text-5xl sm:text-7xl md:text-8xl w-20">
             Superior Customer Service
