@@ -10,6 +10,7 @@ export default function Cars() {
   const dispatch = useDispatch();
 
   const [cars, setCars] = useState([])
+  const [card, setCard] = useState('')
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -33,7 +34,7 @@ export default function Cars() {
       <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8 p-8 -mt-24 ">
         {
           cars.map((car)=>
-            <CarCard name={car.name} price={car.price} carImage={car.carImage} key={car._id} onClick={()=>setCard(car._id)}/>
+            <CarCard car={car} key={car._id} onSelect={(selected) => setCard(selected)}/>
           )
         }
       </div>
@@ -44,7 +45,7 @@ export default function Cars() {
             onClick={() => dispatch(setRender(false))}
           ></div>
           <div className="relative z-50" onClick={(e) => e.stopPropagation()}>
-            <CarPopupCard/>
+            <CarPopupCard card={card}/>
           </div>
         </div>
       )}
