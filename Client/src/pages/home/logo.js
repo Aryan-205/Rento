@@ -7,7 +7,7 @@ const logos = [
   {
     id:2,
     img:'lamboLogo1',
-    brand:'Lamborgini'
+    brand:'Lamborghini'
   },
   {
     id:3,
