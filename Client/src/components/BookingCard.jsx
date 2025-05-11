@@ -2,15 +2,25 @@ import React, { useState } from "react";
 import locations from "../pages/location/location";
 
 export default function BookingCard({card}) {
+
   const [selectedCity, setSelectedCity] = useState("");
   const city = locations.find((u) => u.name === selectedCity);
 
+  if (!card) {
+    return (
+      <div>
+        <p className="text-gray-500 text-xl ">No car selected. Please go back and choose a car to book.</p>
+      </div>
+    );
+  }
+
   return (
+    <>
     <div className="flex flex-col md:flex-row gap-6 p-6 rounded-lg bg-black border border-white w-full">
 
       <div className="md:w-1/2 w-full">
         <img
-          src={`/${card.carImage}`}
+          src={`${card.carImage}`}
           alt="Ferrari"
           className="rounded-xl w-full h-full object-cover border border-white/20 shadow-lg"
         />
@@ -30,11 +40,12 @@ export default function BookingCard({card}) {
           </div>
           <div className="flex flex-col items-end gap-2">
             <p className="text-black text-2xl">.</p>
-            <p className="text-gray-500 text-lg">{card.brand}1</p>
-            <p className="text-gray-500 text-lg">{card.doord}2</p>
-            <p className="text-gray-500 text-lg">{card.type}3</p>
+            <p className="text-gray-500 text-lg">{card.brand}</p>
+            <p className="text-gray-500 text-lg">{card.doors}</p>
+            <p className="text-gray-500 text-lg">{card.type}</p>
             <p className="text-gray-500 text-lg mt-2">
-              {}/Day
+              <span className="text-white">{card.price}</span>
+              /Day
             </p>
           </div>
         </div>
@@ -70,5 +81,6 @@ export default function BookingCard({card}) {
         )}
       </div>
     </div>
+    </> 
   );
 }

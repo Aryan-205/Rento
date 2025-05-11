@@ -4,8 +4,9 @@ import BookingCard from "../components/BookingCard";
 import { useLocation } from "react-router-dom";
 
 export default function Booking(){
-  const locate = useLocation
+  const locate = useLocation()
   const card = locate.state?.card
+  
   return (
     <>
       <Header/>
