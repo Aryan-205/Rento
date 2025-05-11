@@ -3,7 +3,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider} f
 import Home from "./pages/home/Home.jsx"
 import AboutUs from "./pages/AboutUs.jsx"
 import Cars from "./pages/Cars.jsx"
-import Locations from "./pages/Locations.jsx"
+import Locations from "./pages/location/Locations.jsx"
 import Admin from "./pages/Admin.jsx"
 import Booking from "./pages/Booking.jsx"
 

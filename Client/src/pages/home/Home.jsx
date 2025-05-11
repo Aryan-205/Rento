@@ -32,12 +32,11 @@ export default function Home() {
         <p className="text-white text-sm md:text-xl text-center">We provide our coustomers with the most increadible driving experience</p>
         <p className="text-white text-sm md:text-xl">That is why we have only world-class cars in our Fleet</p>
         <div className="flex text-white gap-1 md:gap-4 flex-wrap justify-center">
-          <p className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Premium</p>
-          <p className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Coupe</p>
-          <p className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Hypercars</p>
-          <p className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>SportsCar</p>
-          <p className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Limousines</p>
-          <p className={`rounded-3xl cursor-pointer border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Luxury</p>
+          <p className={`rounded-3xl border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Premium</p>
+          <p className={`rounded-3xl border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Coupe</p>
+          <p className={`rounded-3xl border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Hypercars</p>
+          <p className={`rounded-3xl border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>SportsCar</p>
+          <p className={`rounded-3xl border border-white text-sm md:text-lg p-2 hover:bg-white hover:text-black active:opacity-60 duration-500 ease-in-out}`}>Luxury</p>
         </div>
         <NavLink
           to={'/cars'}>
