@@ -1,9 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addCar, setSelectedCar } from "../store/feature";
 
 export default function CarPopupCard({card}){
 
+  const dispatch = useDispatch()
   const navigate = useNavigate()
+
+  const onClickAddToList = () => {
+    dispatch(addCar(card))
+  }
+  const onClickBookNow = () => {
+    dispatch(addCar(card))
+    dispatch(setSelectedCar(card))
+    navigate('/booking')
+  }
+
   return (
     <>
     <div className="flex justify-center items-center">
@@ -26,8 +39,8 @@ export default function CarPopupCard({card}){
           </div>
         </div>
         <div className="flex justify-between">
-          <button className="text-white border border-white p-1 rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out">Add to List</button>
-          <button className="text-white border border-white p-1 rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out" onClick={()=>navigate('/booking',{state:{card:card}})}>Book Now</button>
+          <button className="text-white border border-white p-1 rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out" onClick={onClickAddToList}>Add to List</button>
+          <button className="text-white border border-white p-1 rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out" onClick={onClickBookNow}>Book Now</button>
         </div>
       </div>
     </div>

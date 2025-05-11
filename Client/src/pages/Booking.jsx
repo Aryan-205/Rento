@@ -1,21 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import BookingCard from "../components/BookingCard";
-import { useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Booking(){
-  const locate = useLocation()
-  const card = locate.state?.card
-  
+
+  const selectedCar = useSelector((state)=>state.feature.selectedCar)
+  const cart = useSelector(state => state.feature.cart)
+  const [cars, setCars] = useState([])
+
+  const total = cart.reduce((sum, car) => sum + Number(car.price), 0);
+
+  useEffect(()=>{
+    if(selectedCar){
+      setCars([selectedCar])
+    } else {
+      setCars(cart)
+    }
+  },[selectedCar,cart])
+
+  if (cars.length === 0) {
+    return (
+      <>
+        <Header/>
+        <div className="mt-20 p-8">
+          <p className="text-gray-500 text-xl ">No car selected. Please go back and choose a car to book.</p>
+        </div>
+      </>
+    );
+  }
+
   return (
     <>
       <Header/>
       <div className="flex gap-8 h-screen p-8 pt-20">
         <div>
-          <BookingCard card={card}/>
+          {
+            cars.map((car) => (
+              <BookingCard key={car.id} card={car} isSelected={selectedCar?.id === car.id} />
+            ))
+          }
         </div>
-        <div>
-
+        <div className="bg-white/10 p-4 text-white rounded-lg mt-6 w-full">
+          <p className="text-xl">Total Booking Price: ${total} / day</p>
         </div>
       </div>
     </>
