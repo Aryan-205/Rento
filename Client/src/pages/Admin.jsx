@@ -26,7 +26,6 @@ function Admin() {
         method:'POST',
         body: data
       })
-      setBrand('')
       setName('')
       setPrice('')
       setType('')

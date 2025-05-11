@@ -17,7 +17,7 @@ const logos = [
   {
     id:4,
     img:'landRoverLogo',
-    brand:'Land Rover'
+    brand:'Land-Rover'
   },
   {
     id:5,
@@ -27,7 +27,7 @@ const logos = [
   {
     id:6,
     img:'RRLogo',
-    brand:'RR'
+    brand:'Rolls-Royce'
   },
   {
     id:7,

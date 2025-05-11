@@ -11,7 +11,7 @@ export default function CarPopupCard({card}){
             <p className="text-white text-2xl">{card.name}</p>
             <p className="text-white text-2xl items-end">Price:</p>
             <p className="text-gray-500 text-lg">Brand</p>
-            <p className="text-gray-500 text-lg">Door: </p>
+            <p className="text-gray-500 text-lg">Doors: </p>
             <p className="text-gray-500 text-lg">Type: </p>
           </div>
           <div className="flex flex-col items-end">
