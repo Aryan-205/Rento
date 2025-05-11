@@ -3,37 +3,29 @@ import locations from "../pages/location/location";
 import { removeCar } from "../store/feature";
 import { useDispatch } from "react-redux";
 
-export default function BookingCard({card}) {
-
-  const dispatch = useDispatch()
-
+export default function BookingCard({ card }) {
+  const dispatch = useDispatch();
   const [selectedCity, setSelectedCity] = useState("");
   const city = locations.find((u) => u.name === selectedCity);
 
   return (
-    <>
     <div className="bg-black border border-white w-full rounded-lg p-6 relative">
-      <div className="flex flex-col md:flex-row gap-6   ">
-
+      <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/2 w-full">
           <img
             src={`${card.carImage}`}
-            alt="Ferrari"
+            alt="Car"
             className="rounded-xl w-full h-full object-cover border border-white/20 shadow-lg"
           />
         </div>
-
         <div className="md:w-1/2 w-full flex flex-col gap-4 justify-between">
-
           <div className="flex justify-between">
             <div className="flex flex-col gap-2">
               <p className="text-white text-2xl">{card.name}</p>
               <p className="text-gray-500 text-lg">Brand</p>
               <p className="text-gray-500 text-lg">Door: </p>
               <p className="text-gray-500 text-lg">Type: </p>
-              <p className="text-white text-2xl mt-2">
-                Price:
-              </p>
+              <p className="text-white text-2xl mt-2">Price:</p>
             </div>
             <div className="flex flex-col items-end gap-2">
               <p className="text-black text-2xl">.</p>
@@ -41,12 +33,10 @@ export default function BookingCard({card}) {
               <p className="text-gray-500 text-lg">{card.doors}</p>
               <p className="text-gray-500 text-lg">{card.type}</p>
               <p className="text-gray-500 text-lg mt-2">
-                <span className="text-white">{card.price}</span>
-                /Day
+                <span className="text-white">{card.price}</span>/Day
               </p>
             </div>
           </div>
-
 
           <select
             name="location"
@@ -63,7 +53,6 @@ export default function BookingCard({card}) {
             <option value="Mumbai">Mumbai</option>
           </select>
 
-
           {city && (
             <div className="bg-white/10 border border-white/20 rounded-xl p-4 shadow-lg mt-2">
               <img
@@ -79,9 +68,13 @@ export default function BookingCard({card}) {
         </div>
       </div>
       <div className="mt-4">
-        <button className="py-2 px-4 text-black bg-white rounded-full text-xl font-bold absolute top-2 right-2 hover:scale-110" onClick={()=>dispatch(removeCar(card.id))}>X</button>
+        <button
+          className="py-2 px-4 text-black bg-white rounded-full text-xl font-bold absolute top-2 right-2 hover:scale-110"
+          onClick={() => dispatch(removeCar(card.id))}
+        >
+          X
+        </button>
       </div>
     </div>
-    </> 
   );
 }

@@ -3,25 +3,24 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addCar, setSelectedCar } from "../store/feature";
 
-export default function CarPopupCard({card}){
-
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+export default function CarPopupCard({ card }) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const onClickAddToList = () => {
-    dispatch(addCar(card))
-  }
+    dispatch(addCar(card));
+  };
+
   const onClickBookNow = () => {
-    dispatch(addCar(card))
-    dispatch(setSelectedCar(card))
-    navigate('/booking')
-  }
+    dispatch(addCar(card)); // Ensure car is in cart
+    dispatch(setSelectedCar(card)); // Also mark as "focused"
+    navigate("/booking");
+  };
 
   return (
-    <>
     <div className="flex justify-center items-center">
       <div className="flex flex-col rounded-lg border border-white p-4 bg-black gap-2">
-        <img src={`${card.carImage}`} alt="" className="w-96 h-auto "/>
+        <img src={`${card.carImage}`} alt="" className="w-96 h-auto" />
         <div className="flex justify-between">
           <div>
             <p className="text-white text-2xl">{card.name}</p>
@@ -32,18 +31,29 @@ export default function CarPopupCard({card}){
           </div>
           <div className="flex flex-col items-end">
             <p className="text-black text-2xl">.</p>
-            <p className="text-gray-500 text-lg"><span className="text-white">${card.price}</span>/Day</p>
+            <p className="text-gray-500 text-lg">
+              <span className="text-white">${card.price}</span>/Day
+            </p>
             <p className="text-gray-500 text-lg ">{card.brand}</p>
             <p className="text-gray-500 text-lg">{card.doors}</p>
             <p className="text-gray-500 text-lg">{card.type}</p>
           </div>
         </div>
         <div className="flex justify-between">
-          <button className="text-white border border-white p-1 rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out" onClick={onClickAddToList}>Add to List</button>
-          <button className="text-white border border-white p-1 rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out" onClick={onClickBookNow}>Book Now</button>
+          <button
+            className="text-white border border-white p-1 rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out"
+            onClick={onClickAddToList}
+          >
+            Add to List
+          </button>
+          <button
+            className="text-white border border-white p-1 rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out"
+            onClick={onClickBookNow}
+          >
+            Book Now
+          </button>
         </div>
       </div>
     </div>
-    </>
-  )
+  );
 }

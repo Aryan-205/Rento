@@ -31,5 +31,5 @@ const featureSlice = createSlice({
   }
 })
 
-export const { toggleRender, setRender, removeCar, addCar } = featureSlice.actions;
+export const { toggleRender, setRender, removeCar, addCar, setSelectedCar } = featureSlice.actions;
 export default featureSlice.reducer;
