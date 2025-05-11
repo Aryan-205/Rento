@@ -1,20 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
+import locations from "../pages/location/location";
 
-export default function BookingCard (){
+export default function BookingCard({card}) {
+  const [selectedCity, setSelectedCity] = useState("");
+  const city = locations.find((u) => u.name === selectedCity);
+
   return (
-    <>
-      <div className="flex flex-col md:flex-row rounded-lg border border-white p-4 w-full bg-black">
-        <img src="/ferrari1.jpg" alt="" className="w-96 h-auto "/>
-        <div className="md:px-8 flex flex-col justify-between">
-          <div>
-            <p className="text-white text-2xl">Ferrari 420</p>
-            <p className="text-gray-500 text-lg">Ferrari</p>
+    <div className="flex flex-col md:flex-row gap-6 p-6 rounded-lg bg-black border border-white w-full">
+
+      <div className="md:w-1/2 w-full">
+        <img
+          src={`/${card.carImage}`}
+          alt="Ferrari"
+          className="rounded-xl w-full h-full object-cover border border-white/20 shadow-lg"
+        />
+      </div>
+
+      <div className="md:w-1/2 w-full flex flex-col gap-4 justify-between">
+
+        <div className="flex justify-between">
+          <div className="flex flex-col gap-2">
+            <p className="text-white text-2xl">{card.name}</p>
+            <p className="text-gray-500 text-lg">Brand</p>
             <p className="text-gray-500 text-lg">Door: </p>
             <p className="text-gray-500 text-lg">Type: </p>
+            <p className="text-white text-2xl mt-2">
+              Price:
+            </p>
           </div>
-          <p className="text-white text-2xl items-end">Price:  <span className="text-gray-500 text-lg">/Day</span></p>
+          <div className="flex flex-col items-end gap-2">
+            <p className="text-black text-2xl">.</p>
+            <p className="text-gray-500 text-lg">{card.brand}1</p>
+            <p className="text-gray-500 text-lg">{card.doord}2</p>
+            <p className="text-gray-500 text-lg">{card.type}3</p>
+            <p className="text-gray-500 text-lg mt-2">
+              {}/Day
+            </p>
+          </div>
         </div>
+
+
+        <select
+          name="location"
+          className="bg-black text-white border border-white rounded-md p-2"
+          onChange={(e) => setSelectedCity(e.target.value)}
+          value={selectedCity}
+        >
+          <option value="">Select City</option>
+          <option value="Jaipur">Jaipur</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Chandigarh">Chandigarh</option>
+          <option value="Siliguri">Siliguri</option>
+          <option value="Bengaluru">Bengaluru</option>
+          <option value="Mumbai">Mumbai</option>
+        </select>
+
+
+        {city && (
+          <div className="bg-white/10 border border-white/20 rounded-xl p-4 shadow-lg mt-2">
+            <img
+              src={`/${city.img}`}
+              alt={city.name}
+              className="w-full h-48 object-cover rounded-md mb-3"
+            />
+            <h2 className="text-xl font-semibold text-white">{city.name}</h2>
+            <p className="text-gray-300">{city.address}</p>
+            <p className="text-gray-500 mt-2 text-sm">Open Daily: 10 AM – 10 PM</p>
+          </div>
+        )}
       </div>
-    </>
-  )
+    </div>
+  );
 }

@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CarPopupCard({card}){
+
+  const navigate = useNavigate()
   return (
     <>
     <div className="flex justify-center items-center">
@@ -24,7 +27,7 @@ export default function CarPopupCard({card}){
         </div>
         <div className="flex justify-between">
           <button className="text-white border border-white p-1 rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out">Add to List</button>
-          <button className="text-white border border-white p-1 rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out">Buy Now</button>
+          <button className="text-white border border-white p-1 rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out" onClick={()=>navigate('/booking',{state:{card:card}})}>Book Now</button>
         </div>
       </div>
     </div>

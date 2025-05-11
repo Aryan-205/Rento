@@ -64,16 +64,16 @@ export default function AboutUs() {
       <div className="p-8">
         <h1 className="text-gray-300 text-5xl my-8">Why Choose Us</h1>
         <div className="flex flex-wrap gap-8 justify-between my-16">
-          <div className="flex flex-col justify-between border border-white rounded-lg w-96 h-80 p-4">
-            <p className="text-white text-2xl font-bold">Premium Cars, Sensible Pricing</p>
+          <div className="flex flex-col justify-between border border-white rounded-lg w-96 h-72 p-4">
+            <p className="text-white text-3xl font-bold mt-4">Premium Cars, Sensible Pricing</p>
             <p className="text-white text-xl">Drive world-class luxury without hidden costs or inflated premiums.</p>
           </div>
-          <div className="flex flex-col justify-between border border-white rounded-lg w-96 h-80 p-4">
-            <p className="text-white text-2xl font-bold">Unparalleled Service</p>
+          <div className="flex flex-col justify-between border border-white rounded-lg w-96 h-72 p-4">
+            <p className="text-white text-3xl font-bold mt-4">Unparalleled Service</p>
             <p className="text-white text-xl">From booking to return, expect concierge-level support and reliability.</p>
           </div>
-          <div className="flex flex-col justify-between border border-white rounded-lg w-96 h-80 p-4">
-            <p className="text-white text-2xl font-bold">Tailored Experiences</p>
+          <div className="flex flex-col justify-between border border-white rounded-lg w-96 h-72 p-4">
+            <p className="text-white text-3xl font-bold mt-4">Tailored Experiences</p>
             <p className="text-white text-xl">Whether it's self-drive or chauffeured elegance, our offerings flex to your preferences.</p>
           </div>
         </div>
