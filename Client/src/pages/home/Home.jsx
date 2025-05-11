@@ -9,15 +9,12 @@ export default function Home() {
 
   const navigate = useNavigate()
 
-  const [brand,setBrand] = useState('')
-  console.log(brand.brand,"from home")
-
   return (
     <>
     <div className="relative">
       <Header/>
       <img src="/ferrari1.jpg" alt="Ferrari" className="object-fill" /> 
-      <p className="absolute top-[180px] right-16 z-10 text-white text-5xl font-bold font-serif tracking-wide">LIVE YOUR DREAM</p>
+      <p className="absolute top-20 right-8 md:top-[180px] md:right-16 z-10 text-white text-2xl md:text-5xl font-bold font-serif tracking-wide">LIVE YOUR DREAM</p>
       <hr />
       <div className="text-white my-10 md:my-40 flex flex-col md:flex-row px-4 gap-8">
         <p className="text-2xl w-80">About Us -</p>
@@ -74,25 +71,25 @@ export default function Home() {
         <p className="text-white text-lg md:text-2xl w-[60%] my-8">We are all about out Client's Comfort and Safety. That's why we provide the best service you can imagine.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between mt-4 md:mt-20 gap-8">
           <div className=" shadow-[0_0_8px_1px_white] rounded-lg h-40 md:h-72 p-8 flex flex-col justify-between hover:bg-slate-950 transition ease-linear">
-            <div className="rounded-full bg-gray-500 p-2 w-10 md:w-16 h-10 md:h-16 flex items-center justify-center">
+            <div className="rounded-full bg-green-800 p-2 w-10 md:w-16 h-10 md:h-16 flex items-center justify-center">
               <img src="/24-7icon.png" alt="" className="w-8 md:w-12"/>
             </div>
             <p className="text-white text-md md:text-xl font-bold w-52">24-hour car delivery</p>
           </div>
           <div className=" shadow-[0_0_8px_1px_white] rounded-lg h-40 md:h-72 p-8 flex flex-col justify-between hover:bg-slate-950 transition ease-linear">
-            <div className="rounded-full bg-gray-500 w-10 md:w-16 h-10 md:h-16 flex items-center justify-center">
+            <div className="rounded-full bg-green-800 w-10 md:w-16 h-10 md:h-16 flex items-center justify-center">
               <img src="/chatIcon.png" alt="" className="w-8 md:w-12"/>
             </div>
             <p className="text-white text-md md:text-xl font-bold w-52">24-7 technical support</p>
           </div>
           <div className=" shadow-[0_0_8px_1px_white] rounded-lg h-40 md:h-72 p-8 flex flex-col justify-between hover:bg-slate-950 transition ease-linear">
-            <div className="rounded-full bg-gray-500 w-10 md:w-16 h-10 md:h-16 flex items-center justify-center">
+            <div className="rounded-full bg-green-800 w-10 md:w-16 h-10 md:h-16 flex items-center justify-center">
               <img src="/flashIcon.png" alt="" className="w-8 md:w-12"/>
             </div>
             <p className="text-white text-md md:text-xl font-bold text-wrap w-52">All models have a premium support</p>
           </div>
           <div className=" shadow-[0_0_8px_1px_white] rounded-lg h-40 md:h-72 p-8 flex flex-col justify-between hover:bg-slate-950 transition ease-linear">
-            <div className="rounded-full bg-gray-500 w-10 md:w-16 h-10 md:h-16 flex items-center justify-center">
+            <div className="rounded-full bg-green-800 w-10 md:w-16 h-10 md:h-16 flex items-center justify-center">
               <img src="/shieldIcon.png" alt="" className="w-8 md:w-12"/>
             </div>
             <p className="text-white text-md md:text-xl font-bold w-52">Absolute Confidedentality</p>

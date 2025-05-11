@@ -37,7 +37,7 @@ const logos = [
   {
     id:8,
     img:'astonMartinLogo',
-    brand:'Aston Martin'
+    brand:'Aston-Martin'
   }
 ]
 
