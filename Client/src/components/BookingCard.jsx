@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import locations from "../pages/location/location";
-import { removeCar } from "../store/feature";
+import { removeCar, selectedLocation } from "../store/feature";
 import { useDispatch } from "react-redux";
 
 export default function BookingCard({ card }) {
   const dispatch = useDispatch();
   const [selectedCity, setSelectedCity] = useState("");
   const city = locations.find((u) => u.name === selectedCity);
+  
+  useEffect(()=>{
+    dispatch(selectedLocation(card._id,city))
+  },[selectedCity])
 
   return (
     <div className="bg-black border border-white w-full rounded-lg p-6 relative">
@@ -70,7 +74,7 @@ export default function BookingCard({ card }) {
       <div className="mt-4">
         <button
           className="py-2 px-4 text-black bg-white rounded-full text-xl font-bold absolute top-2 right-2 hover:scale-110"
-          onClick={() => dispatch(removeCar(card.id))}
+          onClick={() => dispatch(removeCar(card._id))}
         >
           X
         </button>

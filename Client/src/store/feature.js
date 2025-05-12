@@ -3,8 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   render: false,
-  cart:[],
-  selectedCar:null
+  cart:[]
 }
 
 const featureSlice = createSlice({
@@ -18,18 +17,23 @@ const featureSlice = createSlice({
       state.render = action.payload;
     },
     removeCar: (state,action) => {
-      state.cart = state.cart.filter(car=>car.id !== action.payload)
+      state.cart = state.cart.filter(car=>car._id !== action.payload)
     },
-    addCar: (state,action) => {
-      if (!state.cart.find(car => car.id === action.payload.id)) {
-        state.cart.push(action.payload)
+    addCar: (state, action) => {
+      const exists = state.cart.find(car => car._id === action.payload._id);
+      if (!exists) {
+        state.cart.push(action.payload);
       }
     },
-    setSelectedCar: (state, action) => {
-      state.selectedCar = action.payload
+    selectedLocation: (state,action)=>{
+      const { carId, location} = action.payload
+      const car = state.cart.find(c => c._id == carId)
+      if(car){
+        car.location = location
+      }
     }
   }
 })
 
-export const { toggleRender, setRender, removeCar, addCar, setSelectedCar } = featureSlice.actions;
+export const { toggleRender, setRender, removeCar, addCar, selectedLocation } = featureSlice.actions;
 export default featureSlice.reducer;

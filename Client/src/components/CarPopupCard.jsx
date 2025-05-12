@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addCar, setSelectedCar } from "../store/feature";
+import { addCar } from "../store/feature";
 
 export default function CarPopupCard({ card }) {
   const dispatch = useDispatch();
@@ -12,8 +12,7 @@ export default function CarPopupCard({ card }) {
   };
 
   const onClickBookNow = () => {
-    dispatch(addCar(card)); // Ensure car is in cart
-    dispatch(setSelectedCar(card)); // Also mark as "focused"
+    dispatch(addCar(card));
     navigate("/booking");
   };
 
