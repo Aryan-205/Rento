@@ -1,4 +1,4 @@
-import { uploadOnCloudinary } from "../../../Funtube/src/utils/cloudinary.js";
+import { uploadOnCloudinary } from "../utils/cloudinary.js";
 import { Cars } from "../models/car.model.js";
 
 const AddCar = async(req,res) => {
