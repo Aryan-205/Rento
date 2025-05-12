@@ -18,7 +18,7 @@ export default function AboutUs() {
           {logos.map((img)=>
             <div className="grid ">
               <LogoCard img={img} key={img.id}/>
-              <p className="text-white text-center my-4 text-xl">{img.brand}</p>
+              <p className="text-white text-center my-4 text-xl" key={img.id}>{img.brand}</p>
             </div>
           )}
         </div>

@@ -7,10 +7,12 @@ export default function BookingCard({ card }) {
   const dispatch = useDispatch();
   const [selectedCity, setSelectedCity] = useState("");
   const city = locations.find((u) => u.name === selectedCity);
-  
-  useEffect(()=>{
-    dispatch(selectedLocation(card._id,city))
-  },[selectedCity])
+
+  useEffect(() => {
+    if (card.location) {
+      setSelectedCity(card.location);
+    }
+  }, [card.location]);
 
   return (
     <div className="bg-black border border-white w-full rounded-lg p-6 relative">
@@ -45,8 +47,11 @@ export default function BookingCard({ card }) {
           <select
             name="location"
             className="bg-black text-white border border-white rounded-md p-2"
-            onChange={(e) => setSelectedCity(e.target.value)}
-            value={selectedCity}
+            onChange={(e) => {
+              setSelectedCity(e.target.value) 
+              dispatch(selectedLocation({ carId: card._id, location: e.target.value }));
+            }}
+            value={selectedCity || card.location || ""}
           >
             <option value="">Select City</option>
             <option value="Jaipur">Jaipur</option>
@@ -55,6 +60,7 @@ export default function BookingCard({ card }) {
             <option value="Siliguri">Siliguri</option>
             <option value="Bengaluru">Bengaluru</option>
             <option value="Mumbai">Mumbai</option>
+            <option value="Bihar">Bihar</option>
           </select>
 
           {city && (
