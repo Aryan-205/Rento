@@ -29,7 +29,7 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase">Follow us</h2>
                             <div className="grid">
                                 <Link to="/" className="text-gray-500 hover:underline">Discord</Link>
-                                <Link to="/" className="text-gray-500 hover:underline">Twitter</Link>
+                                <a href="https://x.com/AryanBola101" className="text-gray-500 hover:underline">Twitter</a>
                             </div>
                         </div>
                         <div>

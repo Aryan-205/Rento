@@ -28,11 +28,6 @@ const locations = [
     name: "Siliguri",
     img: "Siliguri.webp",
     address: "Hill Cart Road, Opp. Cosmos Mall, Siliguri, West Bengal, 734001",
-  },
-  {
-    name: "Bihar",
-    img: "Bihar.webp",
-    address: "Paschim Pali, Kishanganj, Bihar, 855107"
   }
 ];
 export default locations

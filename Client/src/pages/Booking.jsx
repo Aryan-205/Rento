@@ -52,7 +52,7 @@ export default function Booking() {
           }
           <p className="text-white text-3xl justify-self-end p-2">Total: {total}$ /Day</p>
           <div className="flex justify-center items-center">
-            <button className="text-white border border-white rounded-lg p-2 hover:bg-white hover:text-black active:opacity-60 transition duration-300 ease-in-out" onClick={()=>navigate('/payment',{state:{Total:total}})}>Confirm Booking</button>
+            <button className="text-white border border-white rounded-lg p-2 hover:bg-white hover:text-black active:opacity-60 transition duration-300 ease-in-out" onClick={()=>navigate('/payment')}>Confirm Booking</button>
           </div>
         </div>
         <div className="grid gap-8">

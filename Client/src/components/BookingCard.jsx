@@ -60,7 +60,6 @@ export default function BookingCard({ card }) {
             <option value="Siliguri">Siliguri</option>
             <option value="Bengaluru">Bengaluru</option>
             <option value="Mumbai">Mumbai</option>
-            <option value="Bihar">Bihar</option>
           </select>
 
           {city && (
