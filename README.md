@@ -13,5 +13,7 @@ This is my first full MERN project built completely from scratch using :-
 <p>Cloudinary</p>
 <p>Moongose, MongoDB</p>
 
+# EndNote
+
 <p>I have worked really hard in making this and hope you like it</p>
 <p>Thank You</p>
