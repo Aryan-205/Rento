@@ -1,4 +1,3 @@
-import React,{useState} from "react";
 import Header from "../../components/Header.jsx";
 import LogoCard from "../../components/LogoCard.jsx";
 import logos from './logo.js'
@@ -22,7 +21,7 @@ export default function Home() {
           From Exotic sports cars to Luxury sedans and SUVs, Bola's Exotic Car Collection offers an<span className="text-gray-500"> exceptional selection and Bola's trusted, personalised service</span>
         </p>
       </div>
-      <div className="flex justify-around my-16">
+      <div className="grid lg:grid-cols-8 grid-cols-4 place-items-center gap-4 my-16">
         {logos.map((img)=>
           <LogoCard img={img} key={img.id} onSelect={(selected) => navigate("/cars",{state:{brandChosen: selected.brand}})}/>
         )}
