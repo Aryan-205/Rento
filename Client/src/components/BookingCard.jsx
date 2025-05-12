@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import locations from "../pages/location/location";
 import { removeCar, selectedLocation } from "../store/feature";
 import { useDispatch } from "react-redux";

@@ -7,16 +7,6 @@ export default function CarPopupCard({ card }) {
 
   const [showNotification, setShowNotification] = useState(false);
 
-  const NotificationCard = () => {
-    return (
-      <>
-        <div className="absoulute top-4  border border-white bg-black ">
-          <p className="text-white text-xl">Car added to List</p>
-        </div>
-      </>
-    )
-  }
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

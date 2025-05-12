@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
 function Admin() {
   const [brand,setBrand] = useState('')
@@ -22,7 +22,7 @@ function Admin() {
       data.append("price", price)
       data.append("carImage", carImage)
 
-      await fetch('http://localhost:8000/car/v1/admin',{
+      await fetch(`${import.meta.env.VITE_BACKEND}/car/v1/admin`,{  
         method:'POST',
         body: data
       })

@@ -20,8 +20,8 @@ export default function Cars() {
     const fetchCars = async () => {
       try {
         const url = brand 
-            ? `http://localhost:8000/car/v1/cars?brand=${brand}`
-            : `http://localhost:8000/car/v1/cars`
+            ? `${import.meta.env.VITE_BACKEND}/car/v1/cars?brand=${brand}`
+            : `${import.meta.env.VITE_BACKEND}/car/v1/cars`
         
         const response = await fetch(url);
         const cars = await response.json();
